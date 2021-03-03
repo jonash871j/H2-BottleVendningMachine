@@ -12,6 +12,7 @@ class Program
         BottleVendingMachine machine = new BottleVendingMachine();
         machine.ProcessInfo += OnProcessInfo;
         machine.PulledDrink += OnPulledDrinks;
+        machine.Start();
 
         ConsoleEx.Create(64, 64);
         ConsoleEx.SetFont("Terminal", 16, 16);
@@ -25,8 +26,8 @@ class Program
             ConsoleEx.SetPosition(1, 5);
             ConsoleEx.WriteLine();
             ConsoleEx.WriteLine(ProcessInfo);
-            ConsoleEx.WriteLine($"Bear consumed: {ConsumedBeers}");
-            ConsoleEx.WriteLine($"Bear consumed: {ConsumedSodas}");
+            ConsoleEx.WriteLine($"Beers consumed: {ConsumedBeers}");
+            ConsoleEx.WriteLine($"Sodas consumed: {ConsumedSodas}");
 
             ConsoleEx.Update();
             ConsoleEx.Clear();
