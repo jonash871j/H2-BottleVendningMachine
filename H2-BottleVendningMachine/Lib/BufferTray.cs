@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace H2_BottleVendningMachine.Lib
+﻿namespace H2_BottleVendningMachine.Lib
 {
     public class BufferTray<T>
     {
@@ -26,6 +22,18 @@ namespace H2_BottleVendningMachine.Lib
         {
             Buffer[Position] = type;
             Position++;
+        }
+        public void First(T type)
+        {
+            for (int i = Position; i > 0; i--)
+            {
+                Buffer[i] = Buffer[i - 1];
+            }
+
+            Buffer[0] = type;
+            Position++;
+
+
         }
         public T Pull()
         {
