@@ -14,8 +14,8 @@ class Program
         machine.PulledDrink += OnPulledDrinks;
         machine.Start();
 
-        ConsoleEx.Create(64, 32);
-        ConsoleEx.SetFont("Consolas", 8, 16);
+        ConsoleEx.Create(48, 12);
+        ConsoleEx.SetFont("Consolas", 16, 32);
 
         while(true)
         {
