@@ -7,11 +7,6 @@ namespace H2_BottleVendningMachine.Lib
     {
         public Consumer(BufferTray<Drink> tray, PulledDrinkEvent pulledDrink)
         {
-            if (tray.Length == 0)
-            {
-                Console.Beep(1000, 1000);
-            }
-
             Tray = tray;
             PulledDrink = pulledDrink;
         }
