@@ -34,7 +34,6 @@ class Program
         }
     }
 
-
     private static void OnPulledDrinks(Drink drink)
     {
         switch (drink.Type)

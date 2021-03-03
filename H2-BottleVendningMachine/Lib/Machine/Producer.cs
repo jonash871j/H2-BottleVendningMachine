@@ -27,7 +27,7 @@ namespace H2_BottleVendningMachine.Lib
                         for (int i = MainTray.Position; i < MainTray.Length; i++)
                         {
                             DrinkType drinkType = (DrinkType)(rng.Next(0, 2));
-                            MainTray.First(new Drink(drinkType));
+                            MainTray.PushToFirst(new Drink(drinkType));
                             ProcessInfo?.Invoke($"Drink producer has produced a {drinkType}");
                             Thread.Sleep(rng.Next(200, 500));
                         }

@@ -23,7 +23,7 @@
             Buffer[Position] = type;
             Position++;
         }
-        public void First(T type)
+        public void PushToFirst(T type)
         {
             for (int i = Position; i > 0; i--)
             {
